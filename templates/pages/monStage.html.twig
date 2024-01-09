@@ -2,7 +2,7 @@
 
 {% block title %}Hello PagesController!{% endblock %}
 
-{% block body %}
+{% block main %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
@@ -10,10 +10,33 @@
 
 <div class="example-wrapper">
     <h1>MON STAGE </h1>
-
-    Cette page sert a décrire mon stage de 2ème année en BTS SIO:
-    <ul>
-        <li> <a href="{{path('app_pages_index')}}">Retour à l'accueil</a></li>
-    </ul>
+        <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://imgs.search.brave.com/bzZElSETgY_-xsKw26rkb4Meqole0UlizJ7akxGkWlM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91bml2/ZXJzaXR5LnNlbnNp/b2xhYnMuY29tL2lt/YWdlcy9sb2dvcy9z/eW1mb255LWxvZ28t/d2l0aC10ZXh0LnBu/Zz9zbHV2PTExYmE4/ZDhmMzZlOWNhMDM1/OWY0MTIxYWM1Yjcz/N2FlMGI3Y2MxY2E" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="https://cdn.discordapp.com/attachments/906266353344843827/1194215966666670161/locaux.jpg?ex=65af8b49&is=659d1649&hm=90772be91ee620321a94dc833c0413480107a16e6b7eff303be5e3ff28def584&" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br/>
+    <div class="texte">
+        <p> J'effectue mon stage chez openpixl dans le local de la maison des associations.</p>
+        <br/>
+        <p>Je suis actuellement en train de faire une initiation à symfony, c'est pour cela que je créer ce site à fin de tester des fonctionnalités et de comprendre un peu mieux cet environnement de travail.</p>
+    </div>
+    <div class="bouttons">
+    <a class="btn btn-primary" href="{{path('app_pages_entreprise')}}" role="button">L'entreprise</a>
+    <a class="btn btn-primary" href="{{path('app_pages_formation')}}" role="button">Ma formation</a>
+    </div>
 </div>
 {% endblock %}

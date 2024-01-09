@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PagesController!{% endblock %}
+
+{% block main %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    <img src="https://www.openpixl.fr/user/images/Logos/Patron-Logo2_small_300x91.png" class="img-fluid" alt="...">
+    <br/>
+    <p>Situé dans le département des Landes, OpenPixl accompagne particuliers, Entreprises, associations dans le numérique par la formation, le développement et le conseil. Notre particularité : les solutions dites "Libre" et "Open Source", garantissant un usage plus respectueux de l'usager et sécuritaire.</p>
+    <br/>
+    <a class="btn btn-primary" href="https://www.openpixl.fr/" role="button">Voir le site</a> 
+    <br/>
+    <br/>
+    <br/>
+    <a class="btn btn-primary" href="{{path('app_pages_monStage')}}" role="button">Retour</a>
+</div>
+{% endblock %}

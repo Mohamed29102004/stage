@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PagesController!{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Voiture</h1>
+            <p>Je suis aussi passioner pars l'automobile et ce que elle provoque</p>
+            <br/>
+            <p>L'automobile est une invention révolutionnaire
+                Elle permet de se déplacer rapidement et facilement
+                Elle offre des sensations de vitesse et de liberté
+                Et des possibilités de voyage et d'aventure</p>
+            <br/>
+            <p>L'automobile est une expression de personnalité
+                Elle reflète le goût et le style de son propriétaire
+                Elle suscite l'admiration ou la jalousie
+                Et elle crée des liens ou des rivalités</p>
+            <br/>
+            <p>L'automobile est une passion dévorante
+                Elle exige de l'attention et de l'entretien
+                Elle provoque de l'excitation ou de la frustration
+                Et elle coûte de l'argent et du temps</p>
+            <br/>
+            <p>maintenant faisons un petit jeu! Essayez de deviné quelle voiture vais je avoir en tant que première voiture!<p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/y0gOgWBXqx__thoi1SjypeSaorMHM7bCZAN6_GD-ixI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9l/L2UwL1RveW90YV9D/RUxJQ0FfMi4wX0dU/LUZPVVJfKFNUMjA1/KV9mcm9udC5KUEc" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Toyota Celica GT4</h5>
+                    <p class="card-text">La Toyota Celica GT-Four est un modèle sportif de la Celica Liftback, produit de 1986 à 1999,</p>
+                    <a href="{{path('app_pages_mrep')}}" class="btn btn-primary">Celle ci</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">       
+            <div class="card">
+                <img src="https://imgs.search.brave.com/sm0yeP3DNGn6XoAIvTzrefNCr9-5zzkFSKunyOW8Emc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/YXV0by1mb3JldmVy/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8wMi8wOF9F/MzZfTTNfMTk5NC0x/OTk1X2JlcmxpbmVf/My4wXzEtNjAweDQ1/MC5qcGc" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Bmw e36</h5>
+                    <p class="card-text">La BMW Série 3 E36 est une gamme de voitures familiales produites de 1990 à 1998, avec plusieurs variantes de carrosserie et de motorisation.</p>
+                    <a href="{{path('app_pages_mrep')}}" class="btn btn-primary">Celle ci</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/uCPj7P6FPn04z0rDky1AggnRWPfRCDQL8Wr3xT0BCho/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8w/LzBkLzIwMDctSHl1/bmRhaS1UaWJ1cm9u/LmpwZw" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hyundai Scoupe</h5>
+                    <p class="card-text">La Hyundai Scoupe est un coupé 2 portes basé sur la Hyundai Excel contemporaine.</p>
+                    <a href="{{path('app_pages_brep')}}" class="btn btn-primary">Celle ci</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PagesController!{% endblock %}
+
+{% block main %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>MA FORMATION</h1>
+    <img src="https://static.wixstatic.com/media/4e1d44_0503aaaf622e4a188a9589aa9aa6ffb6~mv2.jpg" class="img-fluid" alt="...">
+    <br/>
+    <br/>
+    <P>J'effectue actuellementun BTS Service Informatique aux Organastions (SIO) en option Solutions Logicielles et Applications Métier (SLAM) au lycée Saint John-Perse à Pau </p>
+    <div class="BTS">
+    <h3> Qu'est ce que le BTS SIO? </h3>
+    <br/>
+    <p>Le BTS services informatiques aux organisations est un diplôme reconnu par l’État de niveau bac+2. Il est certifié niveau 5 au RNCP (répertoire national des certifications professionnelles) et se prépare dans des établissements publics et privés, en formation initiale ou en alternance.</p>
+    <br/>
+    <h3> Le BTS SIO option SLAM </h3>
+    <p>L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement d’applications, intégration au sein de la société).</p>
+    <br/>
+    <p>Les techniciens supérieurs en informatique option SLAM sont préparés aux métiers de : </p>
+    <ul>
+        <li>Développeur d’applications informatiques </li>
+        <li>Développeur informatique </li>
+        <li>Analyste d’applications ou d’études </li>
+        <li>Analyste programmeur </li>
+        <li>Chargé d’études informatiques </li>
+        <li>Programmeur d’applications </li>
+    </ul>
+    <a class="btn btn-primary" href="{{path('app_pages_monStage')}}" role="button">Retour</a>
+</div>
+{% endblock %}

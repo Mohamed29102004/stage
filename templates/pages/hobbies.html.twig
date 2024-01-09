@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PagesController!{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+<div class="example-wrapper">
+    <h1>Mes hobbies</h1>
+
+    <p> Cliquez ici pour voir la liste de mes hobbies</p>
+    <br/>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                hobbies
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{path('app_pages_jeuxvid')}}">Jeux vidéo</a></li>
+                <li><a class="dropdown-item" href="{{path('app_pages_montagne')}}">Montagne</a></li>
+                <li><a class="dropdown-item" href="{{path('app_pages_voiture')}}">L'automobile</a></li>
+            </ul>
+</div>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
