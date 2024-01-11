@@ -10,11 +10,13 @@
 
 <div class="example-wrapper">
     <h1>Bienvenue sur mon site</h1>
-
-    Ce site parlera de tout et n'importe quoi sur moi 😁!
-    <ul>
-        <li> <a href="{{path('app_pages_hobbies')}}">Mes hobbies</a></li>
-        <li> <a href="{{path('app_pages_monStage')}}">Mon stage de 2ème année</a></li>
-    </ul>
-</div>
+    <p>Ce site parlera de tout et n'importe quoi sur moi 😁!</p>
+    <div class="row justify-content-center" id="menu">
+            <ul>
+                <a href="{{path('app_pages_competences')}}" class="btn btn-primary">Mes compétences</a>
+                <a href="{{path('app_pages_hobbies')}}" class="btn btn-primary">Mes hobbies</a>
+                <a href="{{path('app_pages_monStage')}}" class="btn btn-primary">Mon stage de 2ème année</a>
+            </ul>
+    </div>
+</div>        
 {% endblock %}

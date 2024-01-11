@@ -80,6 +80,14 @@ class PagesController extends AbstractController
         ]);
     }
 
+    #[Route('/pages/competences', name: 'app_pages_competences')]
+    public function competences(): Response
+    {
+        return $this->render('pages/competences.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
+
     #[Route('/pages/brep', name: 'app_pages_brep')]
     public function brep(): Response
     {

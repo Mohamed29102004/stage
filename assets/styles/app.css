@@ -1,3 +1,96 @@
-body {
-    background-color: rgb(228, 228, 228);
+/** Partie general **/
+body{
+    background-image: linear-gradient(45deg, rgba(187, 187, 187,0.04) 0%, rgba(187, 187, 187,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 142px 142px;
+    animation: color 12s ease-in-out infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#hobbie{
+    text-align: center;
+}
+
+#menu{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+h1,h2,h3,h4 {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+}
+
+ul {
+    color: white;
+}
+
+/**accordion**/
+.accordion-body {
+    background-color: rgb(133, 127, 127);
+}
+
+.accordion-body p {
+    font-size: 1rem !important;
+}
+
+/**Voiture**/
+#voiture {
+    background-color: rgb(100, 105, 105);
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+#voiture p {
+    color: rgb(0, 0, 0);
+}
+
+#tvoiture p {
+    font-size: 2rem !;
+}
+/**rep**/
+#brep h1 {
+    color: darkgreen;
+}
+
+#mrep h1 {
+    color: rgb(190, 20, 20);
+}
+/**montagne**/
+#montagne {
+    text-align: center;
+    
+}
+
+/**footer **/
+#footer p{
+    font-size: 1rem !important;
+    text-align: center;
+}
+
+#footer {
+    backdrop-filter: blur(40px);
+    --webkit-bacdrop-filter: blur(40px);
 }
