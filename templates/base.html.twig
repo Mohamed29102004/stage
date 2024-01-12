@@ -15,7 +15,7 @@
     </head>
     <body>
         {% block header %}
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -39,10 +39,7 @@
             {% endblock %}
         </main>
         {% block footer %}
-            <br/>
-            <br/>
-            <br/>
-            <div id="footer">
+            <footer id="footer" class=" mt-5">
                 <div class="row">
                     <center>
                         <div class="col-3">
@@ -53,7 +50,7 @@
                         </div>
                     </center>
                 </div>
-            </div>
+            </footer>
         {% endblock %}
     </body>
 </html>
