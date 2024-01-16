@@ -1,3 +1,51 @@
+/**HEADER**/
+#navbarNav {
+    display: flex;
+    justify-content: space-between;
+}
+#gestionco {
+    float: left;
+}
+
+input[type=text], input[type=password] {
+    background-color: gray;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/**DASHBOARD**/
+body .Dash{
+    background-color: grey;
+}
+
+/**FORMULAIRE**/
+body .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+form {
+    text-align: center;
+    background-color:rgba(198, 198, 199);
+    animation: color 12s ease-in-out infinite;
+    border-radius: 50%; /* Cela rendra le fond du formulaire circulaire */
+    width: 250px; /* Ajustez cette valeur pour changer la taille du cercle */
+    height:250px; /* Ajustez cette valeur pour changer la taille du cercle */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /** Partie general **/
 body{
     margin-left: auto;
@@ -111,6 +159,7 @@ ul {
     -moz-border-radius: 40px;
     border-radius: 40px;
 }
+
 
 /**Hobbies **/
 #hobbie{
