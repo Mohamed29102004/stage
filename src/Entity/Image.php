@@ -13,7 +13,7 @@ class Image
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable:false)]
     private ?string $Chemin = null;
 
     #[ORM\Column(length: 255)]
