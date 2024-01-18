@@ -18,47 +18,55 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{path('app_pages_index')}}"><strong>ACCUEIL</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{path('app_pages_monStage')}}"><strong>STAGE</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{path('app_pages_contact')}}"><strong>CONTACT</strong></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav" id="gestionco">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{path('app_admin_dashboard_index')}}"><strong>SE CONNECTER</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{path('app_logout')}}"><strong>SE DECONNECTER</strong></a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </nav>
-        {% endblock %}
-        <main>
-            {% block main %}
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="{{path('app_pages_index')}}"><strong>ACCUEIL</strong></a>
+                                    </li>
+                                    {{render(controller('App\\Controller\\PublicController::menu'))}}
+                                </ul>
+                            </div>
+                        </div>
+                    <ul class="navbar-nav " >
+                    {% if app.user %}
+                        <!-- Dropdown menu, displayed when the user is logged in -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="https://e7.pngegg.com/pngimages/213/343/png-clipart-computer-icons-user-background-icon-cdr-monochrome-thumbnail.png" alt="User Icon" width="30" height="30"></a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{path('app_admin_dashboard_index')}}"><strong>DASHBOARD</strong></a></li>
+                            <li><a class="dropdown-item" href="{{path('app_logout')}}"><strong>SE DECONNECTER</strong></a></li>
+                        </ul>
+                    {% else %}
+                        <!-- Login button, displayed when the user is not logged in -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{path('app_admin_dashboard_index')}}"><strong>SE CONNECTER</strong></a>
+                    </li>
+                    {% endif %}
+            </div>
+        </div>
+    </nav>
+{% endblock %}
 
-            {% endblock %}
-        </main>
-        {% block footer %}
-            <footer id="footer" class=" mt-5">
-                <div class="row">
-                    <center>
-                        <div class="col-3">
-                            <img src="https://th.bing.com/th/id/OIG.a5RinaWnGi01zmeCeRB5?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" class="img-thumbnail" alt="...">
-                        </div>
-                        <div class="col-9">
-                            <p><strong>©</strong> Maaouia Industry 2024</p>
-                        </div>
-                    </center>
+<main>
+{% block main %}
+
+{% endblock %}
+</main>
+
+{% block footer %}
+    <footer id="footer" class=" mt-5">
+        <div class="row">
+            <center>
+                <div class="col-3">
+                    <img src="https://th.bing.com/th/id/OIG.a5RinaWnGi01zmeCeRB5?w=270&h=270&c=6&r=0&o=5&pid=ImgGn" class="img-thumbnail" alt="...">
                 </div>
-            </footer>
-        {% endblock %}
-    </body>
+                <div class="col-9">
+                    <p><strong>©</strong> Maaouia Industry 2024</p>
+                </div>
+            </center>
+        </div>
+    </footer>
+{% endblock %}
+</body>
 </html>

@@ -25,6 +25,9 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $Descriptif = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    private ?Page $idPage = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -76,5 +79,21 @@ class Article
         $this->Descriptif = $Descriptif;
 
         return $this;
+    }
+
+    public function getIdPage(): ?Page
+    {
+        return $this->idPage;
+    }
+
+    public function setIdPage(?Page $idPage): static
+    {
+        $this->idPage = $idPage;
+
+        return $this;
+    }
+
+    public function __toString() {
+        return $this->Nom;
     }
 }

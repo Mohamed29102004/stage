@@ -6,7 +6,9 @@
 #gestionco {
     float: left;
 }
+.nav-item.dropdown {
 
+}
 input[type=text], input[type=password] {
     background-color: gray;
     color: white;
@@ -51,7 +53,8 @@ body{
     animation: color 12s ease-in-out infinite;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    height: 70vh;
+    width: 100%;
 }
 @keyframes color{
     0%{
@@ -64,6 +67,12 @@ body{
         background-position: 0 50%;
     }
 }
+/**IMAGE**/
+.imageBDD {
+    width :100px;
+    height :100px;
+}
+
 
 a {
     color: white;
