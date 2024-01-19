@@ -28,7 +28,7 @@
                 <td>{{ article.id }}</td>
                 <td>{{ article.Auteur }}</td>
                 <td>{{ article.Nom }}</td>
-                <td>{{ article.PublicationAt ? article.PublicationAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ article.PublicationAt ? article.PublicationAt|date('Y-m-d') : '' }}</td>
                 <td>{{ article.Descriptif }}</td>
                 <td>
                     <a href="{{ path('app_article_show', {'id': article.id}) }}" class="btn btn-primary btn-lg">Montrer</a>
@@ -48,4 +48,6 @@
 
 
     <a href="{{ path('app_article_new') }}" class="btn btn-primary btn-lg">Ajouter un article</a>
+    <a href="{{path('app_page_index')}}" class="btn btn-primary btn-lg" id="bmenu">Page</a>
+    <a href="{{path('app_image_index')}}" class="btn btn-primary btn-lg" id="bmenu">Image</a>
 {% endblock %}

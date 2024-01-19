@@ -1,3 +1,3 @@
 {% for menu in menus %}
-    <li><a class="nav-link" href="{{menu.slug}}">{{menu.Nom}}</a></li>
+    <li><a class="nav-link" href="{{path('app_public_page',{'slug':menu.slug})}}">{{menu.Nom}}</a></li>
 {% endfor %}

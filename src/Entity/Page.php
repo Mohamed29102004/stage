@@ -38,6 +38,9 @@ class Page
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isAccueil = null;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -157,6 +160,18 @@ class Page
     public function setSlug(string $slug): static
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function isIsAccueil(): ?bool
+    {
+        return $this->isAccueil;
+    }
+
+    public function setIsAccueil(?bool $isAccueil): static
+    {
+        $this->isAccueil = $isAccueil;
 
         return $this;
     }

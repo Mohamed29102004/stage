@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{page.Nom}}{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{page.Nom}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% for article in articles %}
+                <h3>{{article.Nom | raw}}</h3>
+                <p>{{article.content | raw}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

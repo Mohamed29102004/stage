@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ArticleRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
@@ -27,6 +28,9 @@ class Article
 
     #[ORM\ManyToOne(inversedBy: 'articles')]
     private ?Page $idPage = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $content = null;
 
     public function getId(): ?int
     {
@@ -95,5 +99,17 @@ class Article
 
     public function __toString() {
         return $this->Nom;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(?string $content): static
+    {
+        $this->content = $content;
+
+        return $this;
     }
 }
