@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Image index{% endblock %}
+
+{% block main %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col12">
+            <h1>Image index</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col12">
+            <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Chemin</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for image in images %}
+            <tr class="align-middle">
+                <td>{{ image.id }}</td>
+                <td>
+                <img class="img-fluid imageBDD" src="{{asset('uploads/'~image.Nom)}}" alt="{{image.Nom}}">
+                </td>
+                <td>{{ image.Nom }}</td>
+                <td>
+                    <a href="{{ path('app_image_show', {'id': image.id}) }}" class="btn btn-primary btn-lg">Montrer</a>
+                    <a href="{{ path('app_image_edit', {'id': image.id}) }}" class="btn btn-primary btn-lg">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+    
+    
+
+        <a href="{{ path('app_image_new') }}" class="btn btn-primary btn-lg">Ajouter</a>
+        <a href="{{path('app_page_index')}}" class="btn btn-primary btn-lg" id="bmenu">Page</a>
+        <a href="{{path('app_article_index')}}" class="btn btn-primary btn-lg" id="bmenu">Article</a>
+
+{% endblock %}

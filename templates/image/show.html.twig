@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Image{% endblock %}
+
+{% block main %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col12">
+            <h1>Image</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col12">
+            <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ image.id }}</td>
+            </tr>
+            <tr>
+                <th>Chemin</th>
+                <td>{{ image.Chemin }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ image.Nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+    <a href="{{ path('app_image_index') }}" class="btn btn-primary btn-lg">Retour</a>
+
+    <a href="{{ path('app_image_edit', {'id': image.id}) }}" class="btn btn-primary btn-lg">Modifier</a>
+
+    {{ include('image/_delete_form.html.twig') }}
+{% endblock %}

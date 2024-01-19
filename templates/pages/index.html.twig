@@ -9,11 +9,7 @@
             <h1>Bienvenue sur mon site</h1>
             <p>Ce site parlera de tout et n'importe quoi sur moi 😁!</p>
             <div class="row justify-content-center" id="menu">
-                    <ul>
-                        <a href="{{path('app_pages_competences')}}" class="btn btn-primary btn-lg">Mes compétences</a>
-                        <a href="{{path('app_pages_hobbies')}}" class="btn btn-primary btn-lg" id="bmenu">Mes hobbies</a>
-                        <a href="{{path('app_pages_monStage')}}" class="btn btn-primary btn-lg" id="bmenu">Mon stage de 2ème année</a>
-                    </ul>
+                        {{render(controller('App\\Controller\\PublicController::accueil'))}}
             </div>
         </div>
         

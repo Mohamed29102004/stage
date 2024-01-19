@@ -1,3 +1,50 @@
+/**HEADER**/
+#navbarNav {
+    display: flex;
+    justify-content: space-between;
+}
+#gestionco {
+    float: left;
+}
+.nav-item.dropdown {
+
+}
+input[type=text], input[type=password] {
+    background-color: gray;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/**DASHBOARD**/
+body .Dash{
+    background-color: grey;
+}
+/**ARTICLE**/
+body .listArticle{
+    font-size: 1.5rem;
+}
+/**FORMULAIRE**/
+body .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+form {
+    color: aliceblue;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /** Partie general **/
 body{
     margin-left: auto;
@@ -6,7 +53,8 @@ body{
     animation: color 12s ease-in-out infinite;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    height: 70vh;
+    width: 100%;
 }
 @keyframes color{
     0%{
@@ -19,6 +67,12 @@ body{
         background-position: 0 50%;
     }
 }
+/**IMAGE**/
+.imageBDD {
+    width :100px;
+    height :100px;
+}
+
 
 a {
     color: white;
@@ -111,6 +165,7 @@ ul {
     -moz-border-radius: 40px;
     border-radius: 40px;
 }
+
 
 /**Hobbies **/
 #hobbie{
